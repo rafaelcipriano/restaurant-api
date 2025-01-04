@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "tsx --watch src/server.ts",
-    "commit": "cz"
+    "commit": "cz",
+    "knex": "tsx node_modules/knex/bin/cli.js"
   },
   "keywords": [],
   "author": "Rafael Cipriano",
