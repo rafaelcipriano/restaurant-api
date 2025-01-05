@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { knex } from "@/database/knex";
 import { z } from "zod"
+import { AppError } from "@/utils/AppError";
 
 class ProductControler {
   async index(
@@ -66,6 +67,35 @@ class ProductControler {
       .update({ name, price, updated_at: knex.fn.now() })
   
       return response.status(200).json()
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  async delete(
+    request: Request, 
+    response: Response, 
+    next: NextFunction
+  ) {
+    try {
+      const id = z
+        .string()
+        .transform((value) => Number(value))
+        .refine((value) => !isNaN(value), { message: "id must be a number" })
+        .parse(request.params.id)
+  
+      const product = await knex<ProductRepository>("products")
+        .select()
+        .where({ id })
+        .first()
+
+        if(!product) {
+          throw new AppError("product not found")
+        }
+        
+      await knex<ProductRepository>("products").delete().where({ id })
+  
+      return response.status(200).json("Deletado com sucesso!")
     } catch (error) {
       next(error)
     }
