@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { productRoutes } from "./products-routes";
 import { tablesRoutes } from "./tables-routes";
-import { tablesSessionsRoutes } from "./tables-sessions-routes";
+import { tablesSessionsRoutes } from "./table-sessions-routes";
 
 const routes = Router()
 

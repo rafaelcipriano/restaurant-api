@@ -1,6 +1,6 @@
 import { Router } from "express"
 
-import { TablesSessionsController } from "@/controllers/tables-sessions-controller"
+import { TablesSessionsController } from "@/controllers/table-sessions-controller"
 
 const tablesSessionsRoutes = Router()
 const tablesSessionsController = new TablesSessionsController()
