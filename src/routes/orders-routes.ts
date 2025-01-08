@@ -5,6 +5,6 @@ const ordersRoutes = Router()
 const ordersController = new OrdersController()
 
 
-ordersRoutes.use("/", ordersController.create)
+ordersRoutes.post("/", ordersController.create)
 
 export { ordersRoutes }
