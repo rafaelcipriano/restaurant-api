@@ -17,11 +17,11 @@ Retorna um array de objetos.
 ```json
 [
   {
-    "id": 1,
-		"name": "Bife a cebolado",
-		"price": 33.29,
-		"created_at": "2025-01-01 00:00:01",
-		"updated_at": "2025-01-01 00:00:01"
+	"id": 1,
+	"name": "Bife a cebolado",
+	"price": 33.29,
+	"created_at": "2025-01-01 00:00:01",
+	"updated_at": "2025-01-01 00:00:01"
   }
 ]
 ```
@@ -65,18 +65,18 @@ Retorna um JSON conténdo as mesas geradas por um *Seed* atráves do *[Knex.js](
 ```json
 {
 	"tables": [
-			{
-				"id": 1,
-				"table_number": 1,
-				"created_at": "2025-01-01 00:00:01",
-				"updated_at": "2025-01-01 00:00:01"
-			},
-			{
-				"id": 2,
-				"table_number": 2,
-				"created_at": "2025-01-01 00:00:01",
-				"updated_at": "2025-01-01 00:00:01"
-			}
+		{
+		  "id": 1,
+		  "table_number": 1,
+		  "created_at": "2025-01-01 00:00:01",
+		  "updated_at": "2025-01-01 00:00:01"
+		},
+		{
+		  "id": 2,
+		  "table_number": 2,
+		  "created_at": "2025-01-01 00:00:01",
+		  "updated_at": "2025-01-01 00:00:01"
+		}
 	]
 }
 ```
@@ -99,11 +99,11 @@ Retorna um JSON vázio com um *status code* de *200*.
 Retorna um JSON com um array de objetos.
 ```json
 [
-  {
-		"id": 1,
-		"table_id": 1,
-		"opened_at": "2025-01-06 11:30:00",
-		"closed_at": null
+	{
+	  "id": 1,
+	  "table_id": 1,
+	  "opened_at": "2025-01-06 11:30:00",
+	  "closed_at": null
 	}
 ]
 ```
@@ -116,11 +116,11 @@ Retorna JSON vázio, um *status code* de *200*, e atualiza a propriedade *closed
 Exemplo das alterações:
 ```json
 [
-  {
-		"id": 1,
-		"table_id": 1,
-		"opened_at": "2025-01-06 11:30:00",
-		"closed_at": "2025-01-06 12:30:00"
+	{
+	  "id": 1,
+	  "table_id": 1,
+	  "opened_at": "2025-01-06 11:30:00",
+	  "closed_at": "2025-01-06 12:30:00"
 	}
 ]
 ```
@@ -146,15 +146,15 @@ Retorna os pedidos realizados para a sessão da mesa.
 ```json
 [
 	{
-		"id": 3,
-		"table_session_id": 3,
-		"product_id": 15,
-		"name": "Iscas de frango",
-		"price": 60,
-		"quantity": 2,
-		"total": 120,
-		"created_at": "2025-01-06 11:35:00",
-		"updated_at": "2025-01-06 11:35:00"
+	  "id": 3,
+	  "table_session_id": 3,
+	  "product_id": 15,
+	  "name": "Iscas de frango",
+	  "price": 60,
+	  "quantity": 2,
+	  "total": 120,
+	  "created_at": "2025-01-06 11:35:00",
+	  "updated_at": "2025-01-06 11:35:00"
 	}
 ]
 ```
