@@ -16,13 +16,13 @@ O cliente chega ao restaurante e se senta em uma mesa (*Tables*), o restaurante 
 Retorna um array de objetos.
 ```json
 [
-    {
-        "id": 1,
+  {
+    "id": 1,
 		"name": "Bife a cebolado",
 		"price": 33.29,
 		"created_at": "2025-01-01 00:00:01",
 		"updated_at": "2025-01-01 00:00:01"
-    }
+  }
 ]
 ```
 
@@ -32,8 +32,8 @@ Retorna um array de objetos.
 Recebe um JSON no body com as propriedades *name* e *price*.
 ```json
 {
-    "name": "Contra filé a parmegiana",
-    "price": 38.00
+	"name": "Contra filé a parmegiana",
+	"price": 38.00
 }
 ```
 Retorna um JSON vázio com um *status code* de *201 Created*.
@@ -45,8 +45,8 @@ Retorna um JSON vázio com um *status code* de *201 Created*.
 Recebe um JSON com uma propriedade *name* e *price*.
 ```json
 {
-    "name": "Contra filé",
-    "price": 32.00
+	"name": "Contra filé",
+	"price": 32.00
 }
 ```
 Retorna JSON vázio com um *status code* de *200 Successuful*.
@@ -64,20 +64,20 @@ Retorna um JSON com a mensagem "Deletado com sucesso!"
 Retorna um JSON conténdo as mesas geradas por um *Seed* atráves do *[Knex.js](https://knexjs.org/)*
 ```json
 {
-    "tables": [
-        {
-            "id": 1,
-			"table_number": 1,
-			"created_at": "2025-01-01 00:00:01",
-			"updated_at": "2025-01-01 00:00:01"
-        },
-        {
-            "id": 2,
-			"table_number": 2,
-			"created_at": "2025-01-01 00:00:01",
-			"updated_at": "2025-01-01 00:00:01"
-        }
-    ]
+	"tables": [
+			{
+				"id": 1,
+				"table_number": 1,
+				"created_at": "2025-01-01 00:00:01",
+				"updated_at": "2025-01-01 00:00:01"
+			},
+			{
+				"id": 2,
+				"table_number": 2,
+				"created_at": "2025-01-01 00:00:01",
+				"updated_at": "2025-01-01 00:00:01"
+			}
+	]
 }
 ```
 
@@ -88,7 +88,7 @@ Retorna um JSON conténdo as mesas geradas por um *Seed* atráves do *[Knex.js](
 Recebe um JSON com a propriedade *table_id*, para identificar qual mesa está sendo aberta.
 ```json
 {
-    "table_id": 1
+	"table_id": 1
 }
 ```
 Retorna um JSON vázio com um *status code* de *200*.
@@ -99,7 +99,7 @@ Retorna um JSON vázio com um *status code* de *200*.
 Retorna um JSON com um array de objetos.
 ```json
 [
-    {
+  {
 		"id": 1,
 		"table_id": 1,
 		"opened_at": "2025-01-06 11:30:00",
@@ -116,7 +116,7 @@ Retorna JSON vázio, um *status code* de *200*, e atualiza a propriedade *closed
 Exemplo das alterações:
 ```json
 [
-    {
+  {
 		"id": 1,
 		"table_id": 1,
 		"opened_at": "2025-01-06 11:30:00",
@@ -132,9 +132,9 @@ Exemplo das alterações:
 Recebe um JSON com o número da sessão da mesa, o *id* do produto que o cliente solicitou e a quantidade do produto solicitado.
 ```json
 {
-    "table_session_id": 2,
-    "product_id": 23,
-    "quantity": 2
+	"table_session_id": 2,
+	"product_id": 23,
+	"quantity": 2
 }
 ```
 Retorna um JSON vázio com um *status code* de *201 Created*.
